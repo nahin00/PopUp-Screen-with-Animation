@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  PopUp Screen
 //
-//  Created by Silicon Orchard Ltd on 2/23/17.
-//  Copyright © 2017 Silicon Orchard Ltd. All rights reserved.
+//  Created by Nahin Ahmed on 2/23/17.
+//  Copyright © 2017 Nahin Ahmed Ltd. All rights reserved.
 //
 
 import UIKit
