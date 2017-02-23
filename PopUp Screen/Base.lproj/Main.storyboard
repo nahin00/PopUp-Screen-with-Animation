@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PopUp_Screen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,93 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBg-OT-qdb">
+                                <rect key="frame" x="155" y="301" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="ps1-f8-bWi"/>
+                                    <constraint firstAttribute="height" constant="64" id="yPc-IJ-Xac"/>
+                                </constraints>
+                                <state key="normal" title="Open"/>
+                                <connections>
+                                    <action selector="openSecondVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nu0-y9-0Yd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZBg-OT-qdb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O2O-jz-R3e"/>
+                            <constraint firstItem="ZBg-OT-qdb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VrL-qU-4ss"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="ggL-be-Mlq">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="SML-ks-hre" customClass="SecondViewController" customModule="PopUp_Screen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MVm-ii-ANc"/>
+                        <viewControllerLayoutGuide type="bottom" id="is4-bc-Czb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UhO-CP-zCJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2I-oi-QGt">
+                                <rect key="frame" x="112" y="233" width="150" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKX-uu-dfx">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="wjg-r9-FzI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkE-bA-Ve8">
+                                        <rect key="frame" x="0.0" y="170" width="150" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="UG1-8b-dRc"/>
+                                        </constraints>
+                                        <state key="normal" title="Got it!">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="gotItTapped:" destination="SML-ks-hre" eventType="touchUpInside" id="0S5-IO-3lr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FKX-uu-dfx" secondAttribute="trailing" id="0gr-Uu-7Tq"/>
+                                    <constraint firstAttribute="width" constant="150" id="2Tw-rd-cZL"/>
+                                    <constraint firstAttribute="height" constant="200" id="3SG-im-lwC"/>
+                                    <constraint firstItem="FKX-uu-dfx" firstAttribute="leading" secondItem="q2I-oi-QGt" secondAttribute="leading" id="NX2-g3-pFG"/>
+                                    <constraint firstItem="GkE-bA-Ve8" firstAttribute="leading" secondItem="q2I-oi-QGt" secondAttribute="leading" id="QRY-rl-Evb"/>
+                                    <constraint firstItem="FKX-uu-dfx" firstAttribute="top" secondItem="q2I-oi-QGt" secondAttribute="top" id="dgb-oF-pDo"/>
+                                    <constraint firstAttribute="bottom" secondItem="GkE-bA-Ve8" secondAttribute="bottom" id="lmo-Q4-7H8"/>
+                                    <constraint firstAttribute="trailing" secondItem="GkE-bA-Ve8" secondAttribute="trailing" id="yx7-Qv-2UV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q2I-oi-QGt" firstAttribute="centerY" secondItem="UhO-CP-zCJ" secondAttribute="centerY" id="jau-C7-o5D"/>
+                            <constraint firstItem="q2I-oi-QGt" firstAttribute="centerX" secondItem="UhO-CP-zCJ" secondAttribute="centerX" id="oHJ-QY-Kg5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="popUpViewBackground" destination="q2I-oi-QGt" id="Ojf-Oe-cRU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IrO-Cg-CAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="38"/>
         </scene>
     </scenes>
 </document>

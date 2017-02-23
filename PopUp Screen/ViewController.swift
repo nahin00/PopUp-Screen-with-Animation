@@ -21,5 +21,19 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func openSecondVC(_ sender: UIButton) {
+        
+        let secondVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        self.addChildViewController(secondVC)
+        
+        secondVC.view.frame = self.view.frame
+        self.view.addSubview(secondVC.view)
+        
+        secondVC.didMove(toParentViewController: self)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+    }
 }
 
